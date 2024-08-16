@@ -5,7 +5,8 @@ function FormComponent() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    phone: ''
   });
 
   const handleChange = (e) => {
@@ -40,6 +41,15 @@ function FormComponent() {
             type="email"
             name="email"
             value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label>Phone:</label>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
             onChange={handleChange}
           />
         </div>
